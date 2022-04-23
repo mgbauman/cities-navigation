@@ -1,4 +1,3 @@
-
 async function getCities() {
   let request = await fetch("./Files/navigation.json");
   const cities = await request.json();
@@ -10,13 +9,19 @@ function populateNavigation(obj) {
   const cities = obj['cities'];
 
   for (const city of cities) {
-    const listItem = document.createElement('li');
     const linkTag= document.createElement('a');
-
+    linkTag.className = 'nav-item';
+    linkTag.href = '#';
     linkTag.textContent = city.label;
-    listItem.appendChild(linkTag);
+    linkTag.addEventListener("click", function() {
+      let current = document.querySelector(".nav-item.active");
+      if (current) {
+        current.className = current.className.replace(" active", "");
+      }
+      this.className += " active";
+    });
 
-    unorderedListElement.appendChild(listItem);
+    unorderedListElement.appendChild(linkTag);
   }
 }
 
