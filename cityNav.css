@@ -41,11 +41,13 @@
   text-align: center;
   border-radius: 10px;
 }
+
 .clock-container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
+
 .clock-time {
   font-family: "Orbitron", "Courier New", sans-serif;
   font-size: 48px;
