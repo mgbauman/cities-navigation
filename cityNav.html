@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <title>Cities</title>
     <link rel="stylesheet" href="cityNav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <nav class="main-navigation">
-      <div id="cities" class="cities-list">
+      <div id="cities">
         <div id="navigation-indicator"></div>
       </div>
     </nav>
-    <script src="cityNav.js"></script>
+
+    <div class="clock-container">
+      <div class="clock">
+        <span class="clock-time"></span>
+      </div>
+    </div>
+
+    <script type="module" src="cityNav.js"></script>
+    <script type="module" src="clock.js"></script>
   </body>
 </html>

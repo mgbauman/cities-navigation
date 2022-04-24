@@ -19,7 +19,7 @@
 }
 
 .nav-item.active {
-  color: darkslategrey;
+  color: dimgrey;
 }
 
 .nav-item:not(.active):hover {
@@ -30,6 +30,24 @@
   position: absolute;
   height: 2px;
   bottom: -2px;
-  background: darkslategrey;
+  background: dimgrey;
   transition: 0.5s;
+}
+
+.clock {
+  background: dimgrey;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.clock-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.clock-time {
+  font-family: "Orbitron", "Courier New", sans-serif;
+  font-size: 48px;
+  color: whitesmoke;
 }

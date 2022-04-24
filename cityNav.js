@@ -1,3 +1,5 @@
+import { Clock } from "./clock.js";
+
 /**
  * Retrieves JSON data and then adds it to the navigation.
  */
@@ -29,6 +31,7 @@ function populateNavigation(jsonResponse) {
       }
       this.className += " active";
       resizeNavigationIndicator(event.target);
+      clockObject.update(city.timezone);
     });
 
     unorderedListElement.appendChild(linkTag);
@@ -51,4 +54,7 @@ window.addEventListener("resize", function(event) {
   resizeNavigationIndicator(activeItem);
 });
 
+const clockElement = document.querySelector(".clock");
+const clockObject = new Clock(clockElement);
+clockObject.start();
 populate();
